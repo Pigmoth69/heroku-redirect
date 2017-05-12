@@ -7,7 +7,7 @@ app.get('*', function(request, response) {
 });
 
 app.post('*', function(request, response) {
-  response.redirect(process.env.NEW_BASE_URL + request.url,req.body)
+  response.redirect(process.env.NEW_BASE_URL + request.url+"/"+req.body.notification_id)
 });
 
 var port = process.env.PORT || 5000;
